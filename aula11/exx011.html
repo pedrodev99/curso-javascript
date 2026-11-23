@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de país</title>
+</head>
+<body>
+    <h1>Sistema identificador</h1>
+    <input type="text" name="txtpaís" id="txtpaís">
+    <input type="button" value="Verificar" onclick="definir()">
+    <div id="res">
+
+    </div>
+    
+    <script>
+        function definir() {
+            var txtp = document.querySelector('input#txtpaís')
+            var res = document.querySelector('div#res')
+            var país = txtp.value.toLowerCase()
+            if (país != 'brasil') {
+                res.innerHTML = `<p>Você não é <strong>brasileiro!</strong></p>`
+            }  else {
+                res.innerHTML =`Você é brasileiro`
+            }
+        }
+    </script>
+</body>
+</html>
